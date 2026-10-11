@@ -1,0 +1,23 @@
+{
+ "id": "efa0fe901ecc",
+ "titre": "je veux un script qui permet d'analyser la sureté d'un autre",
+ "mode": "code",
+ "cree": 1791478361.7693443,
+ "maj": 1791478361.8400087,
+ "messages": [
+  {
+   "role": "user",
+   "contenu": "je veux un script qui permet d'analyser la sureté d'un autre script",
+   "t": 1791478361.7794135
+  }
+ ],
+ "resume": "",
+ "debut": 0,
+ "dernier_input": 0,
+ "tokens": {
+  "entree": 0,
+  "sortie": 0,
+  "cache": 0
+ },
+ "cout": 0.0
+}

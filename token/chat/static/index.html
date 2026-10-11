@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concis</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" id="hl-theme" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="logo">◆</span>
+        <span class="brand-name">Concis</span>
+        <button id="btn-theme" class="icon-btn" title="Changer de thème">◐</button>
+      </div>
+
+      <button class="btn-new" id="btn-new"><span>＋</span> Nouvelle conversation</button>
+      <input id="search" class="search" type="search" placeholder="Rechercher…">
+
+      <nav id="conv-list" class="conv-list"></nav>
+
+      <div class="sidebar-foot">
+        <button id="btn-modes" class="foot-btn">⚙ Modes &amp; réglages</button>
+        <div class="total" id="total"></div>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="btn-menu" class="icon-btn mobile-only" title="Menu">☰</button>
+        <div class="title" id="title">Nouvelle conversation</div>
+        <div class="stats" id="stats"></div>
+      </header>
+
+      <section id="messages" class="messages"></section>
+
+      <footer class="composer-wrap">
+        <div class="banner" id="banner" hidden></div>
+        <div class="projet" id="projet" hidden></div>
+        <div class="composer">
+          <textarea id="input" rows="1" placeholder="Écris ton message…"></textarea>
+          <div class="toolbar">
+            <div class="mode-picker">
+              <button id="mode-btn" class="mode-chip" type="button"></button>
+              <div id="mode-menu" class="mode-menu" hidden></div>
+            </div>
+            <div class="seg" id="longueur" title="Longueur de réponse demandée">
+              <button type="button" data-v="">Auto</button>
+              <button type="button" data-v="bref">Bref</button>
+              <button type="button" data-v="detaille">Détaillé</button>
+            </div>
+            <button type="button" class="toggle" id="isole" title="Envoie seulement cette question, sans l'historique : beaucoup moins de tokens pour une question indépendante.">⊘ Sans historique</button>
+            <span class="spacer"></span>
+            <span class="cost" id="cost" title="Estimation des tokens envoyés avec ce message (instructions + historique + message)"></span>
+            <button id="send" class="send" title="Envoyer (Entrée)">↑</button>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <dialog id="modal" class="modal">
+    <div class="modal-head">
+      <h2>Modes &amp; réglages</h2>
+      <button class="icon-btn" id="modal-close" title="Fermer">✕</button>
+    </div>
+    <div class="modal-body">
+      <nav class="modal-nav" id="modal-nav"></nav>
+      <form class="modal-form" id="modal-form"></form>
+    </div>
+  </dialog>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
